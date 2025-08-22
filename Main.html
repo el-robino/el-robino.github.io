@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>elrobino games</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Roboto', Arial, sans-serif;
+			background: linear-gradient(120deg, #232526, #414345);
+			margin: 0;
+			padding: 0;
+			color: #fff;
+		}
+		header {
+			background: #232526;
+			padding: 30px 0 20px 0;
+			text-align: center;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+		}
+		header h1 {
+			margin: 0;
+			font-size: 2.5rem;
+			letter-spacing: 2px;
+		}
+		.search-bar {
+			margin: 30px auto 20px auto;
+			max-width: 500px;
+			display: flex;
+			background: #2c2f34;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		}
+		.search-bar input {
+			flex: 1;
+			padding: 15px;
+			border: none;
+			outline: none;
+			font-size: 1rem;
+			background: transparent;
+			color: #fff;
+		}
+		.search-bar button {
+			background: #ff4b2b;
+			color: #fff;
+			border: none;
+			padding: 0 25px;
+			cursor: pointer;
+			font-size: 1rem;
+			transition: background 0.2s;
+		}
+		.search-bar button:hover {
+			background: #ff416c;
+		}
+		.games-list {
+			max-width: 900px;
+			margin: 40px auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 30px;
+		}
+		.game-card {
+			background: #2c2f34;
+			border-radius: 12px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+			padding: 25px 20px 20px 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			transition: transform 0.2s;
+		}
+		.game-card:hover {
+			transform: translateY(-8px) scale(1.03);
+		}
+		.game-card img {
+			width: 120px;
+			height: 120px;
+			object-fit: cover;
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+		.game-card h2 {
+			margin: 0 0 10px 0;
+			font-size: 1.2rem;
+		}
+		.game-card p {
+			font-size: 0.95rem;
+			color: #bbb;
+			margin-bottom: 18px;
+			text-align: center;
+		}
+		.download-btn {
+			background: #ff4b2b;
+			color: #fff;
+			border: none;
+			padding: 10px 28px;
+			border-radius: 6px;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+		.download-btn:hover {
+			background: #ff416c;
+		}
+		@media (max-width: 600px) {
+			.games-list {
+				grid-template-columns: 1fr;
+			}
+			header h1 {
+				font-size: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Robino Crack Games</h1>
+	</header>
+	<form class="search-bar" onsubmit="event.preventDefault(); searchGames();">
+		<input type="text" id="searchInput" placeholder="Rechercher un jeu...">
+		<button type="submit">Rechercher</button>
+	</form>
+	<section class="games-list" id="gamesList">
+		<!-- Jeux -->
+		<div class="game-card">
+			<img src="https://sm.ign.com/ign_fr/cover/p/peak/peak_en11.jpg" alt="Game 1">
+			<h2>Peak</h2>
+			<p>Un jeu d'escalade a jouer avec des amis</p>
+			<button class="download-btn" onclick="window.open('https://drive.google.com/file/d/1H2EiaOhYTR4xl__-rQrB8IiLRozNSVlm/view?usp=sharing')">Télécharger</button>
+		</div>
+		<div class="game-card">
+			<img src="https://lesplayersdudimanche.com/wp-content/uploads/2023/11/popularite-de-lethal-company.png" alt="Game 2">
+			<h2>Lethal company</h2>
+			<p>Exploré des planets pour récupérer des trésore de valeur pour remplire votre quota.</p>
+			<button class="download-btn" onclick="window.open('https://mega.nz/file/2YFzDCYZ#9yVzrKdZ5G4JH9qcj09vXAuRRpqVyc9gmtJY3p5GQf0')">Télécharger</button>
+		</div>
+		<div class="game-card">
+			<img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1397390/capsule_616x353.jpg?t=1748520684" alt="Game 3">
+			<h2>The break in</h2>
+			<p>Un jeu de voleur multi joueur vr et non vr très drole.</p>
+			<button class="download-btn" onclick="window.open('https://mega.nz/file/H7AhTJjA#w7EvRToM3X3kwgoSSI61HdGnp8sVhQxC-r-EYDNf_kU')">Télécharger</button>
+		</div>
+			<div class="game-card">
+				<img src="https://image.api.playstation.com/cdn/EP4064/CUSA04022_00/DAyywhQEMaRv3o98rrEE0eyIpfJo5ixg.png" alt="Cyberpunk 2077">
+				<h2>Worms W.M.D</h2>
+				<p>Jeu tour par tour où vous controlez des verts afronté vos ami en utilisant des armes loufoque.</p>
+				<button class="download-btn" onclick="window.open('https://mega.nz/file/WFEwmCpK#mphXVtqPThbaKmWBfcgNk-ftS6j6nxUYteJaoYVkNCU')">Télécharger</button>
+			</div>
+			<div class="game-card">
+				<img src="https://imgproxy.eneba.games/22nmLp3v54_mLQ7jm86fxEBI5HoCkYBPcdw3eeNAap0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9G/R181MVhUeHpEMC1n/TlB5S2JOTjBRUUI5/TkVtUjdVc01hbXFz/RWRteFVvLmpwZWc" alt="GTA V">
+				<h2>Gang Beast</h2>
+				<p>Affronté vos ami dans des combats ridicules.</p>
+				<button class="download-btn" onclick="window.open('https://mega.nz/file/HzpEkLoY#KgQfIYb8cWYWpf1RD063iVixsK7VOViRMu4d6tIyy5A')">Télécharger</button>
+			</div>
+			<div class="game-card">
+				<img src="https://gaming-cdn.com/images/products/19897/orig/mage-arena-pc-steam-cover.jpg?v=1753956253" alt="Dota 2">
+				<h2>Mage Arena</h2>
+				<p>Devenez hary poter en crian vos sort a voix haute pour attaqué vos ennemis.</p>
+				<button class="download-btn" onclick="window.open('https://mega.nz/file/K7A2zCoA#5zKQCZJ9SZ4xO71eeq4mO0M2gRG70nShz9KwqOZ4X9k')">Télécharger</button>
+			</div>
+            <div class="game-card">
+				<img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/guilty-as-sock-tetiere-file-eac1557a.jpg.webp" alt="Dota 2">
+				<h2>Guilty as a sock</h2>
+				<p>Dans un tribunal jugé les cas de personne en utilisant des preuve pour le rendre coupable ou non.</p>
+				<button class="download-btn" onclick="window.open('https://mega.nz/file/DqhySDBY#Tj6iUeFVlX2XR8UZWiAm9w8dp4qUt_KOpC-Dvpj_H5M')">Télécharger</button>
+			</div>
+	</section>
+	<script>
+		function searchGames() {
+			const input = document.getElementById('searchInput').value.toLowerCase();
+			const cards = document.querySelectorAll('.game-card');
+			cards.forEach(card => {
+				const title = card.querySelector('h2').textContent.toLowerCase();
+				card.style.display = title.includes(input) ? '' : 'none';
+			});
+		}
+	</script>
+	<footer style="background:#232526; color:#fff; text-align:center; padding:32px 10px 18px 10px; margin-top:60px; border-top:1px solid #333;">
+		<h2 style="margin-bottom:10px; font-size:1.3rem; letter-spacing:1px;">Contact</h2>
+		<p style="margin:0; font-size:1rem;">Pour toute question, suggestion ou demande de partenariat, contactez-moi :</p>
+		<p style="margin:10px 0 0 0; font-size:1.1rem; font-weight:bold;">
+			Email : <a href="mailto:elrobino42gomez@gmail.com" style="color:#ff4b2b; text-decoration:none;">elrobino42gomez@gmail.com</a>
+		</p>
+		<p style="margin:10px 0 0 0; font-size:1.1rem; font-weight:bold;">
+			Discord : <span style="color:#ff4b2b;">elrobino42#6913</span>
+		</p>
+	</footer>
+</body>
+</html>
